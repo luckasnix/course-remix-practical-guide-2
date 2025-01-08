@@ -1,8 +1,8 @@
-import type { Route } from "./+types/home";
-import homeStylesheet from "~/styles/home.css?url";
+import type { Route } from "./+types/root";
+import rootStylesheet from "~/styles/root.css?url";
 
 export const links: Route.LinksFunction = () => [
-  { rel: "stylesheet", href: homeStylesheet },
+  { rel: "stylesheet", href: rootStylesheet },
 ];
 
 export const meta: Route.MetaFunction = ()  => [
@@ -10,10 +10,10 @@ export const meta: Route.MetaFunction = ()  => [
   { name: "description", content: "This is the home page!" },
 ];
 
-const Home = () => (
+const Root = () => (
   <main>
-    <h1>Home</h1>
+    <h1>Root</h1>
   </main>
 );
 
-export default Home;
+export default Root;
