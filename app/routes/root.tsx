@@ -6,8 +6,8 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export const meta: Route.MetaFunction = ()  => [
-  { title: "Home" },
-  { name: "description", content: "This is the home page!" },
+  { title: "Root" },
+  { name: "description", content: "This is the root page!" },
 ];
 
 const Root = () => (

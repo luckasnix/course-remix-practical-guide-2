@@ -4,7 +4,7 @@ const routeConfig: RouteConfig = [
   index("routes/root.tsx"),
   route("/pricing", "routes/pricing.tsx"),
   route("/auth", "routes/auth.tsx"),
-  route("/expenses", "routes/expenses/layout.tsx",[
+  route("/expenses", "routes/expenses/layout.tsx", [
     index("routes/expenses/list.tsx"),
     route("/expenses/analysis", "routes/expenses/analysis.tsx"),
     route("/expenses/addition", "routes/expenses/addition.tsx"),

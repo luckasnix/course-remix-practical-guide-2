@@ -9,7 +9,7 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import resetStylesheet from "./reset.css?url";
+import resetStylesheet from "~/styles/reset.css?url";
 
 export const links: Route.LinksFunction = () => [
   { rel: "stylesheet", href: resetStylesheet },
