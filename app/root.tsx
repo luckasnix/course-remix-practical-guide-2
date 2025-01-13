@@ -9,7 +9,6 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import { MainHeader } from "~/components/main-header/main-header";
 import rootStylesheet from "~/styles/root.css?url";
 
 export const links: Route.LinksFunction = () => [
@@ -25,7 +24,6 @@ export const Layout = ({ children }: { children: ReactNode }) => (
       <Links />
     </head>
     <body>
-      <MainHeader />
       {children}
       <ScrollRestoration />
       <Scripts />

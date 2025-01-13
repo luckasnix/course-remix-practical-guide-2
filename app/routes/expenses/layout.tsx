@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 
+import { ExpensesHeader } from "~/components/expenses-header/expenses-header";
 import { ExpenseList } from "~/components/expense-list/expense-list";
 import expensesStylesheet from "~/styles/expenses.css?url";
 import type { ExpenseItem } from "~/types/expenses";
@@ -36,10 +37,13 @@ export const meta: Route.MetaFunction = ()  => [
 ];
 
 const ExpensesLayout = () => (
-  <main>
-    <ExpenseList expenses={expenseList} />
-    <Outlet />
-  </main>
+  <>
+    <ExpensesHeader />
+    <main>
+      <ExpenseList expenses={expenseList} />
+      <Outlet />
+    </main>
+  </>
 );
 
 export default ExpensesLayout;

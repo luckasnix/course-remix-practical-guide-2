@@ -1,3 +1,4 @@
+import { ExpensesHeader } from "~/components/expenses-header/expenses-header";
 import { ExpenseStatistics } from "~/components/expense-statistics/expense-statistics";
 import { Chart } from "~/components/chart/chart";
 import expensesStylesheet from "~/styles/expenses.css?url";
@@ -29,11 +30,19 @@ export const links: Route.LinksFunction = () => [
   { rel: "stylesheet", href: expensesStylesheet },
 ];
 
+export const meta: Route.MetaFunction = ()  => [
+  { title: "Expenses Analysis" },
+  { name: "description", content: "This is the Expenses Analysis page!" },
+];
+
 const ExpensesAnalysis = () => (
-  <main>
-    <Chart expenses={expenseList} />
-    <ExpenseStatistics expenses={expenseList} />
-  </main>
+  <>
+    <ExpensesHeader />
+    <main>
+      <Chart expenses={expenseList} />
+      <ExpenseStatistics expenses={expenseList} />
+    </main>
+  </>
 );
 
 export default ExpensesAnalysis;
