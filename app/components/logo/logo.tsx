@@ -1,5 +1,7 @@
+import { Link } from "react-router";
+
 export const Logo = () => (
   <h1 id="logo">
-    <a href="/">RemixExpenses</a>
+    <Link to="/">RemixExpenses</Link>
   </h1>
 );

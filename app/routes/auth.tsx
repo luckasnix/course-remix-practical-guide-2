@@ -1,4 +1,5 @@
 import type { Route } from "./+types/auth";
+import { AuthForm } from "~/components/auth-form/auth-form";
 import authStylesheet from "~/styles/auth.css?url";
 
 export const links: Route.LinksFunction = () => [
@@ -12,7 +13,7 @@ export const meta: Route.MetaFunction = ()  => [
 
 const Auth = () => (
   <main>
-    <h1>Auth</h1>
+    <AuthForm />
   </main>
 );
 

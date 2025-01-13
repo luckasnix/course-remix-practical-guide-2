@@ -9,29 +9,29 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import resetStylesheet from "~/styles/reset.css?url";
+import { MainHeader } from "~/components/main-header/main-header";
+import rootStylesheet from "~/styles/root.css?url";
 
 export const links: Route.LinksFunction = () => [
-  { rel: "stylesheet", href: resetStylesheet },
+  { rel: "stylesheet", href: rootStylesheet },
 ];
 
-export const Layout = ({ children }: { children: ReactNode }) => {
-  return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-      </body>
-    </html>
-  );
-};
+export const Layout = ({ children }: { children: ReactNode }) => (
+  <html lang="en">
+    <head>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <Meta />
+      <Links />
+    </head>
+    <body>
+      <MainHeader />
+      {children}
+      <ScrollRestoration />
+      <Scripts />
+    </body>
+  </html>
+);
 
 export const ErrorBoundary = ({ error }: Route.ErrorBoundaryProps) => {
   let message = "Oops!";
@@ -62,8 +62,6 @@ export const ErrorBoundary = ({ error }: Route.ErrorBoundaryProps) => {
   );
 };
 
-const App = () => {
-  return <Outlet />;
-};
+const App = () => <Outlet />;
 
 export default App;

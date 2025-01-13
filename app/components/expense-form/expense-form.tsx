@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export const ExpenseForm = () => {
   const today = new Date().toISOString().slice(0, 10);
 
@@ -26,7 +28,7 @@ export const ExpenseForm = () => {
       </div>
       <div className="form-actions">
         <button>Save Expense</button>
-        <a href="tbd">Cancel</a>
+        <Link to="/expenses">Cancel</Link>
       </div>
     </form>
   );

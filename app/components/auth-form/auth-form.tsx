@@ -1,4 +1,5 @@
-import { FaLock } from 'react-icons/fa';
+import { Link } from "react-router";
+import { FaLock } from "react-icons/fa";
 
 export const AuthForm = () => (
   <form method="post" className="form" id="auth-form">
@@ -15,7 +16,7 @@ export const AuthForm = () => (
     </p>
     <div className="form-actions">
       <button>Login</button>
-      <a href="/auth">Log in with existing user</a>
+      <Link to="/auth">Log in with existing user</Link>
     </div>
   </form>
 );

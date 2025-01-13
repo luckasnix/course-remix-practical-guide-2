@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export type ExpenseListItemProps = {
   id: string;
   title: string;
@@ -17,7 +19,7 @@ export const ExpenseListItem = ({ id, title, amount }: ExpenseListItemProps) => 
       </div>
       <menu className="expense-actions">
         <button onClick={deleteExpenseItemHandler}>Delete</button>
-        <a href="tbd">Edit</a>
+        <Link to={`/expenses/${id}`}>Edit</Link>
       </menu>
     </article>
   );
