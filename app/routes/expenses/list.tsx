@@ -1,5 +1,6 @@
-import { ExpenseStatistics } from "~/components/expense-statistics/expense-statistics";
-import { Chart } from "~/components/chart/chart";
+import { Outlet } from "react-router";
+
+import { ExpenseList } from "~/components/expense-list/expense-list";
 import type { ExpenseItem } from "~/types/expenses";
 
 const expenseList: ExpenseItem[] = [
@@ -23,11 +24,11 @@ const expenseList: ExpenseItem[] = [
   }
 ];
 
-const ExpensesAnalysis = () => (
+const ExpensesList = () => (
   <main>
-    <Chart expenses={expenseList} />
-    <ExpenseStatistics expenses={expenseList} />
+    <ExpenseList expenses={expenseList} />
+    <Outlet />
   </main>
 );
 
-export default ExpensesAnalysis;
+export default ExpensesList;
