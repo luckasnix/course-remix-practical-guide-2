@@ -13,6 +13,7 @@ const routeConfig: RouteConfig = [
     ]),
     route("/expenses/analysis", "routes/expenses/analysis.tsx"),
   ]),
+  route("/expenses/raw", "routes/expenses/raw.ts"),
 ];
 
 export default routeConfig;
