@@ -1,4 +1,5 @@
-import { Outlet } from "react-router";
+import { Link, Outlet } from "react-router";
+import { FaPlus, FaDownload } from "react-icons/fa";
 
 import { ExpenseList } from "~/components/expense-list/expense-list";
 import type { ExpenseItem } from "~/types/expenses";
@@ -25,10 +26,22 @@ const expenseList: ExpenseItem[] = [
 ];
 
 const ExpensesList = () => (
-  <main>
-    <ExpenseList expenses={expenseList} />
-    <Outlet />
-  </main>
+  <>
+    <section id="expenses-actions">
+      <Link to="/expenses/addition">
+        <FaPlus />
+        <span>Add Expense</span>
+      </Link>
+      <a href="/expenses/raw">
+        <FaDownload />
+        <span>Load Raw Data</span>
+      </a>
+    </section>
+    <main>
+      <ExpenseList expenses={expenseList} />
+      <Outlet />
+    </main>
+  </>
 );
 
 export default ExpensesList;
